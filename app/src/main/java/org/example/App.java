@@ -4,6 +4,7 @@
 package org.example;
 
 import lombok.extern.slf4j.Slf4j;
+import lombok.val;
 
 @Slf4j 
 public class App {
@@ -13,23 +14,23 @@ public class App {
     }
 
     public void run() {
-        var circle = new com.khvatov.Circle(15);
-        var rectangle = new com.khvatov.Rectangle(10, 5);
-        var triangle = new com.khvatov.Triangle(8, 6);
+        val circle = new com.khvatov.Circle(15);
+        val rectangle = new com.khvatov.Rectangle(10, 5);
+        val triangle = new com.khvatov.Triangle(8, 6);
 
-        var areaVisitor = new com.khvatov.visitors.AreaVisitor();
-        double circleArea = circle.accept(areaVisitor);
-        double rectangleArea = rectangle.accept(areaVisitor);
+        val areaVisitor = new com.khvatov.visitors.AreaVisitor();
+        val circleArea = circle.accept(areaVisitor);
+        val rectangleArea = rectangle.accept(areaVisitor);
         double triangleArea = triangle.accept(areaVisitor);
 
         log.debug(String.format("Circle area: %.2f", circleArea));
         log.debug(String.format("Rectangle area: %.2f", rectangleArea));
         log.debug(String.format("Triangle area: %.2f", triangleArea));
 
-        var perimeterVisitor = new com.khvatov.visitors.PerimeterVisitor();
-        double circlePerimeter = circle.accept(perimeterVisitor);
-        double rectanglePerimeter = rectangle.accept(perimeterVisitor);
-        double trianglePerimeter = triangle.accept(perimeterVisitor);
+        val perimeterVisitor = new com.khvatov.visitors.PerimeterVisitor();
+        val circlePerimeter = circle.accept(perimeterVisitor);
+        val rectanglePerimeter = rectangle.accept(perimeterVisitor);
+        val trianglePerimeter = triangle.accept(perimeterVisitor);
 
         log.debug(String.format("Circle perimeter: %.2f", circlePerimeter));
         log.debug(String.format("Rectangle perimeter: %.2f", rectanglePerimeter));
