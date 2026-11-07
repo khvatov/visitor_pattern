@@ -3,6 +3,7 @@
  */
 package org.example;
 
+
 public class App {
    
     public static void main(String[] args) {
@@ -19,17 +20,17 @@ public class App {
         double rectangleArea = rectangle.accept(areaVisitor);
         double triangleArea = triangle.accept(areaVisitor);
 
-        System.out.println("Circle area: " + circleArea);
-        System.out.println("Rectangle area: " + rectangleArea);
-        System.out.println("Triangle area: " + triangleArea);
+        IO.println(String.format("Circle area: %.2f", circleArea));
+        IO.println(String.format("Rectangle area: %.2f", rectangleArea));
+        IO.println(String.format("Triangle area: %.2f", triangleArea));
 
         var perimeterVisitor = new com.khvatov.visitors.PerimeterVisitor();
         double circlePerimeter = circle.accept(perimeterVisitor);
         double rectanglePerimeter = rectangle.accept(perimeterVisitor);
         double trianglePerimeter = triangle.accept(perimeterVisitor);
 
-        System.out.println("Circle perimeter: " + circlePerimeter);
-        System.out.println("Rectangle perimeter: " + rectanglePerimeter);
-        System.out.println("Triangle perimeter: " + trianglePerimeter);
+        IO.println(String.format("Circle perimeter: %.2f", circlePerimeter));
+        IO.println(String.format("Rectangle perimeter: %.2f", rectanglePerimeter));
+        IO.println(String.format("Triangle perimeter: %.2f", trianglePerimeter));
     }
 }
