@@ -26,6 +26,8 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+    implementation(libs.slf4j)
+    runtimeOnly(libs.logback)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

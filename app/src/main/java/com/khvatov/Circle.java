@@ -2,11 +2,9 @@ package com.khvatov;
 
 import com.khvatov.visitors.ShapeVisitor;
 
-import lombok.RequiredArgsConstructor;
-import lombok.Getter;
+import lombok.Value;
 
-@Getter
-@RequiredArgsConstructor
+@Value
 public class Circle implements Shape{
     private final double radius;
 

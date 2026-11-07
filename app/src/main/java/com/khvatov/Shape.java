@@ -1,5 +1,4 @@
 package com.khvatov;
 
-public interface Shape {
 
-}
+public interface Shape {}

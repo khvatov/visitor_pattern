@@ -3,7 +3,9 @@
  */
 package org.example;
 
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j 
 public class App {
    
     public static void main(String[] args) {
@@ -20,17 +22,17 @@ public class App {
         double rectangleArea = rectangle.accept(areaVisitor);
         double triangleArea = triangle.accept(areaVisitor);
 
-        IO.println(String.format("Circle area: %.2f", circleArea));
-        IO.println(String.format("Rectangle area: %.2f", rectangleArea));
-        IO.println(String.format("Triangle area: %.2f", triangleArea));
+        log.debug(String.format("Circle area: %.2f", circleArea));
+        log.debug(String.format("Rectangle area: %.2f", rectangleArea));
+        log.debug(String.format("Triangle area: %.2f", triangleArea));
 
         var perimeterVisitor = new com.khvatov.visitors.PerimeterVisitor();
         double circlePerimeter = circle.accept(perimeterVisitor);
         double rectanglePerimeter = rectangle.accept(perimeterVisitor);
         double trianglePerimeter = triangle.accept(perimeterVisitor);
 
-        IO.println(String.format("Circle perimeter: %.2f", circlePerimeter));
-        IO.println(String.format("Rectangle perimeter: %.2f", rectanglePerimeter));
-        IO.println(String.format("Triangle perimeter: %.2f", trianglePerimeter));
+        log.debug(String.format("Circle perimeter: %.2f", circlePerimeter));
+        log.debug(String.format("Rectangle perimeter: %.2f", rectanglePerimeter));
+        log.debug(String.format("Triangle perimeter: %.2f", trianglePerimeter));
     }
 }

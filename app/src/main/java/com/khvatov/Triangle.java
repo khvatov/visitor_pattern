@@ -1,10 +1,9 @@
 package com.khvatov;
 import com.khvatov.visitors.ShapeVisitor;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-@Getter
-@RequiredArgsConstructor
+import lombok.Value;
+
+@Value
 public class Triangle {
     private final double base;
     private final double height;

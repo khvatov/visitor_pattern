@@ -5,8 +5,12 @@
 guava = "33.5.0-jre"
 junit-jupiter = "6.0.1"
 lombok = "1.18.48"
+slf4j = "2.0.20"
+logback = "1.5.34"
 
 [libraries]
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+slf4j = {module = "org.slf4j:slf4j-api", version.ref = "slf4j"}
+logback = {module = "ch.qos.logback:logback-classic", version.ref = "logback"}
